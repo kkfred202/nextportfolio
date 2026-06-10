@@ -1,0 +1,64 @@
+---
+title: "VLAN Segmentation & Inter-VLAN Routing Lab"
+date: "2024-06-01"
+status: "done"
+tags: ["Cisco IOS", "VLANs", "STP", "Packet Tracer"]
+description: "Configured VLANs, trunk ports, and inter-VLAN routing on Cisco switches and routers."
+---
+
+## Overview
+
+In this lab I built a network with three separate VLANs to segment traffic between departments. I then configured inter-VLAN routing so they could communicate through a Layer 3 switch.
+
+## Objectives
+
+- Create and name VLANs on multiple switches
+- Configure trunk links between switches
+- Set up inter-VLAN routing using a Layer 3 switch
+- Verify connectivity and traffic isolation between VLANs
+
+## Network Topology
+
+Add your Packet Tracer screenshot here.
+
+## Configuration
+
+### VLAN Creation
+
+```
+Switch(config)# vlan 10
+Switch(config-vlan)# name HR
+Switch(config)# vlan 20
+Switch(config-vlan)# name Sales
+Switch(config)# vlan 30
+Switch(config-vlan)# name IT
+```
+
+### Trunk Port Configuration
+
+```
+Switch(config)# interface GigabitEthernet0/1
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan 10,20,30
+```
+
+### Inter-VLAN Routing
+
+```
+Switch(config)# interface vlan 10
+Switch(config-if)# ip address 192.168.10.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config)# interface vlan 20
+Switch(config-if)# ip address 192.168.20.1 255.255.255.0
+Switch(config-if)# no shutdown
+```
+
+## Testing
+
+Verified connectivity using ping between hosts on different VLANs. Confirmed traffic isolation by checking that untagged traffic stayed within its VLAN.
+
+## What I Learned
+
+- How VLANs segment broadcast domains
+- The difference between access and trunk ports
+- How a Layer 3 switch handles inter-VLAN routing without a separate router
