@@ -40,19 +40,19 @@ export default function ContactSection() {
           <div className="contact-links">
             <a
               className="clink"
-              href="https://linkedin.com/in/yourname"
+              href="https://linkedin.com/in/kimutai-fredrick"
               target="_blank"
               rel="noopener noreferrer"
             >
-              🔗 linkedin.com/in/yourname
+              🔗 linkedin.com/in/kimutai-fredrick
             </a>
             <a
               className="clink"
-              href="https://github.com/yourname"
+              href="https://github.com/kkfred202"
               target="_blank"
               rel="noopener noreferrer"
             >
-              🐙 github.com/yourname
+              🐙 github.com/kkfred202
             </a>
             <a className="clink" href="mailto:kkfred202@gmail.com">
               ✉ kkfred202@gmail.com
