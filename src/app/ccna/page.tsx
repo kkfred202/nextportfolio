@@ -25,6 +25,8 @@ export default function CCNAPage() {
         </div>
       </header>
 
+
+
       {labs.length === 0 ? (
         <p className="labs-empty">NO LABS PUBLISHED YET — CHECK BACK SOON</p>
       ) : (

@@ -55,7 +55,7 @@ export default function ContactSection() {
               🐙 github.com/kkfred202
             </a>
             <a className="clink" href="mailto:kkfred202@gmail.com">
-              ✉ kkfred202@gmail.com
+              ✉ linzykiptoo@gmail.com
             </a>
           </div>
         </div>
