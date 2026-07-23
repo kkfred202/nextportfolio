@@ -81,8 +81,6 @@ Cisco Catalyst 3560G
 VLAN 1: 192.168.1.10
 ```
 
-![Hardware setup showing the Cisco Catalyst 3560G connected to the Windows 11 laptop](/images/ccna/switch-hardening/hardware-setup.jpg)
-
 ---
 
 ## Initial State
@@ -95,8 +93,6 @@ Before hardening, the switch was in a default configuration:
 - No local users
 - Telnet enabled on VTY lines
 - No banner configured
-
-![Default switch configuration before hardening](/images/ccna/switch-hardening/initial-state.png)
 
 ---
 
@@ -270,17 +266,6 @@ A successful SSH login confirmed that:
 
 ---
 
-## Troubleshooting
-
-| Problem | Cause | Resolution |
-|---|---|---|
-| SSH connection refused | RSA keys not generated | Generated RSA keys with crypto key generate rsa modulus 2048 |
-| SSH connection timeout | VTY lines not configured | Configured transport input ssh on VTY lines |
-| Authentication failed | Username not created | Created local admin account with username command |
-| Banner not displaying | Incorrect delimiter | Used ^ as the banner delimiter consistently |
-| DNS lookup on typos | ip domain-lookup enabled | Disabled with no ip domain-lookup |
-
----
 
 ## Verification Checklist
 
