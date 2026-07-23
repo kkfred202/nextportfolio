@@ -39,6 +39,19 @@ const mdxComponents = {
       .replace(/[^\w-]/g, "");
     return <h3 id={id} {...props}>{children}</h3>;
   },
+  img: ({ src, alt }: { src?: string; alt?: string }) => (
+    <img
+      src={src}
+      alt={alt || ""}
+      style={{
+        width: "100%",
+        borderRadius: "10px",
+        margin: "1.5rem 0",
+        border: "1px solid var(--border)",
+        display: "block",
+      }}
+    />
+  ),
 } as Record<string, (props: Record<string, unknown>) => JSX.Element>;
 
 export default async function CCNALabPage({ params }: Props) {

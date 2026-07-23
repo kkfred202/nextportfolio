@@ -56,7 +56,7 @@ export default function ContactSection() {
             </a>
             <a className="clink" href="mailto:kkfred202@gmail.com">
               ✉ linzykiptoo@gmail.com
-            </a>
+            </a>der
           </div>
         </div>
 
