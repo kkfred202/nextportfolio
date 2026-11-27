@@ -6,6 +6,7 @@ export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [company, setCompany] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = async (e: FormEvent) => {
@@ -15,7 +16,7 @@ export default function ContactSection() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, company }),
       });
       if (!res.ok) throw new Error("Failed");
       setStatus("success");
@@ -61,6 +62,17 @@ export default function ContactSection() {
         </div>
 
         <form className="form-stack" onSubmit={handleSubmit} noValidate>
+          {/* Honeypot for spam bots: hidden from people and screen readers */}
+          <input
+            type="text"
+            name="company"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ position: "absolute", left: "-10000px", width: 1, height: 1, opacity: 0 }}
+          />
           <input
             className="finput"
             type="text"
