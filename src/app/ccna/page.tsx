@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "CCNA Labs",
   description:
     "Hands-on networking labs covering routing, switching, VLANs, OSPF, ACLs, NAT and more. Built in Packet Tracer and EVE-NG.",
+  alternates: { canonical: "/ccna" },
 };
 
 export default function CCNAPage() {
