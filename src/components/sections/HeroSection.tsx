@@ -10,12 +10,13 @@ export default function HeroSection() {
         <strong>Network &amp; Cloud<br />Infrastructure</strong>
       </h1>
       <p className="hero-bio">
-        3rd-year student at CCT College Dublin. Hands-on with physical infrastructure,
-        structured cabling, virtualisation labs on EVE-NG, and cloud fundamentals.
+        Final-year student at CCT College Dublin. I run my own homelab (Proxmox, MikroTik,
+        Cisco Catalyst, LibreNMS), build labs in EVE-NG and Packet Tracer, and do hands-on
+        cabling and network fixes.
         Working towards CCNA and AWS Solutions Architect.
       </p>
       <div className="pill-row" aria-label="Technologies">
-        {["EVE-NG", "Cisco IOS", "MikroTik", "Python", "Ansible", "Terraform", "AWS", "Linux CLI", "Cat5/6 Cabling"].map((pill) => (
+        {["EVE-NG", "Cisco IOS", "MikroTik", "Proxmox", "LibreNMS", "Python", "Linux CLI", "AWS", "Cat5/6 Cabling"].map((pill) => (
           <span key={pill} className="pill">{pill}</span>
         ))}
       </div>

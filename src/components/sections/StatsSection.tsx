@@ -3,12 +3,12 @@ export default function StatsSection() {
     <section className="section" aria-label="Key stats">
       <div className="stats-row">
         <div className="stat">
-          <div className="stat-n">3rd</div>
+          <div className="stat-n">Final</div>
           <div className="stat-l">Year BSc Computing &amp; IT</div>
         </div>
         <div className="stat">
-          <div className="stat-n">2</div>
-          <div className="stat-l">Certs (+ 1 in progress)</div>
+          <div className="stat-n">CCNA</div>
+          <div className="stat-l">In progress &middot; exam Feb 2027</div>
         </div>
         <div className="stat">
           <div className="stat-n">PT</div>

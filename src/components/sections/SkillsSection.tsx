@@ -7,22 +7,22 @@ const skills = [
   {
     icon: "🔌",
     name: "Physical infrastructure",
-    items: "Cat5/6 cabling · Termination · Patching · Fibre awareness · Rack setup",
+    items: "Cat5/6 cabling · Crimping & termination · Patch panels · PoE · CCTV/NVR",
   },
   {
     icon: "🖥️",
     name: "Systems & virtualisation",
-    items: "Linux CLI · Windows Server · VirtualBox · VMware · Hyper-V",
+    items: "Proxmox VE · Linux CLI · Windows Server 2022 · VirtualBox · VMware · Hyper-V",
   },
   {
     icon: "☁️",
     name: "Cloud",
-    items: "AWS EC2 · S3 · VPC · IAM · CloudWatch · Free tier labs",
+    items: "AWS EC2 · S3 · VPC · IAM (AWS Academy Cloud Foundations)",
   },
   {
-    icon: "⚙️",
-    name: "Automation",
-    items: "Python basics · Ansible intro · Terraform fundamentals",
+    icon: "📈",
+    name: "Monitoring & scripting",
+    items: "LibreNMS · SNMP · Python basics · Git & GitHub",
   },
   {
     icon: "🔬",

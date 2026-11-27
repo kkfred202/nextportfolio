@@ -15,8 +15,8 @@ const academicProjects: Project[] = [
     name: "OSPF multi-area routing topology",
     desc: "Built a multi-router OSPF topology in EVE-NG. Configured areas, verified adjacencies, and traced routing tables.",
     tags: ["OSPF", "Routing", "EVE-NG", "Cisco IOS"],
-    slug: "ospf-routing",
-    section: "ccna",
+    slug: null,
+    section: null,
   },
   {
     label: "Systems · Virtualisation",
@@ -29,14 +29,30 @@ const academicProjects: Project[] = [
   {
     label: "Cloud · AWS",
     name: "AWS core services exploration",
-    desc: "Hands-on with EC2, S3, VPC, IAM and CloudWatch through AWS free tier. Built foundational understanding for CCP certification.",
+    desc: "Hands-on with EC2, S3, VPC, IAM and CloudWatch through AWS free tier. Studied through the AWS Academy Cloud Foundations course.",
     tags: ["AWS", "EC2", "S3", "VPC", "IAM"],
-    slug: "aws-core-services",
-    section: "saa",
+    slug: null,
+    section: null,
   },
 ];
 
 const personalProjects: Project[] = [
+  {
+    label: "Homelab · Proxmox",
+    name: "VLAN homelab with monitoring",
+    desc: "Internet to MikroTik hAP ac³ to Cisco Catalyst 3560 to an HP ProDesk running Proxmox VE. An 802.1Q trunk carries VLANs 10, 20, 30 and 99, with the MikroTik doing inter-VLAN routing, DHCP and NAT. LibreNMS on a Proxmox VM monitors both devices over SNMP. Fixed a fault where all four VLANs passed no traffic: the trunk interface was still in a bridge.",
+    tags: ["Proxmox", "MikroTik", "Cisco Catalyst", "802.1Q", "LibreNMS", "SNMP"],
+    slug: null,
+    section: null,
+  },
+  {
+    label: "On the job · Hands-on IT",
+    name: "CCTV, POS and network fixes at work",
+    desc: "Alongside my job at Apache Pizza I fixed CCTV and NVR network issues, set up a PoE switch for the cameras, set up a VLAN for the POS network, and restored connectivity for POS terminals and receipt printers that auto-print web orders.",
+    tags: ["CCTV/NVR", "PoE", "VLANs", "POS", "Troubleshooting"],
+    slug: null,
+    section: null,
+  },
   {
     label: "MikroTik · Home lab",
     name: "MikroTik hAP ac³ home network setup",
@@ -68,7 +84,7 @@ function ProjectRow({ label, name, desc, tags, slug, section }: Project) {
           ))}
         </div>
       </div>
-      <span className="proj-arrow" aria-hidden="true">↗</span>
+      {slug && section && <span className="proj-arrow" aria-hidden="true">↗</span>}
     </div>
   );
 
@@ -103,20 +119,6 @@ export default function ProjectsSection() {
               </div>
             </div>
           </Link>
-          <Link href="/saa" className="lab-card">
-            <div className="lab-card-top">
-              <div className="lab-card-left">
-                <div className="lab-card-title">AWS SAA Labs</div>
-                <div className="lab-card-desc">
-                  VPC, EC2, IAM, S3, Load Balancers and more.
-                  Built towards AWS Solutions Architect Associate.
-                </div>
-              </div>
-              <div className="lab-card-right">
-                <span className="lab-arrow" aria-hidden="true">↗</span>
-              </div>
-            </div>
-          </Link>
         </div>
       </section>
 
@@ -134,7 +136,7 @@ export default function ProjectsSection() {
         <div className="sec-eyebrow">Home networking</div>
         <div className="sec-title">Personal projects</div>
         <p className="sec-subtitle">
-          Real-world work done outside of college on my own hardware.
+          Real-world work on my own hardware and on the job.
         </p>
         <div className="proj-list">
           {personalProjects.map((p) => (
