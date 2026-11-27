@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "AWS SAA Labs",
   description:
     "Hands-on AWS labs covering VPC, EC2, IAM, S3, Route 53, Load Balancers, Auto Scaling and more. Built towards the AWS Solutions Architect Associate certification.",
+  // Hidden from search until there are SAA labs to show.
+  robots: { index: false, follow: true },
 };
 
 export default function SAAPage() {

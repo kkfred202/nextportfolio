@@ -21,6 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: frontmatter.title,
     description: frontmatter.description,
+    alternates: { canonical: `/ccna/${slug}` },
+    openGraph: {
+      type: "article",
+      url: `/ccna/${slug}`,
+      title: frontmatter.title,
+      description: frontmatter.description,
+      images: ["/opengraph-image"],
+    },
   };
 }
 
