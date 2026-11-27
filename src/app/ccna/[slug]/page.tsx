@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getLabContent, getLabsForSection } from "../../../lib/mdx";
