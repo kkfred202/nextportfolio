@@ -1,9 +1,9 @@
 const certs = [
   {
-    badge: "CCP",
+    badge: "AWS",
     cls: "cb-aws",
-    name: "AWS Certified Cloud Practitioner",
-    sub: "Amazon Web Services · 2024",
+    name: "AWS Academy Cloud Foundations",
+    sub: "Course badge · Amazon Web Services",
   },
   {
     badge: "SAFE",
@@ -15,7 +15,7 @@ const certs = [
     badge: "CCNA",
     cls: "cb-cisco",
     name: "CCNA",
-    sub: "Cisco · In progress",
+    sub: "Cisco · Studying, exam Feb 2027",
   },
   {
     badge: "SAA",

@@ -21,7 +21,6 @@ export default function Navbar() {
         <div className="nav-links">
           <Link href="/">Home</Link>
           <Link href="/ccna">CCNA Labs</Link>
-          <Link href="/saa">SAA Labs</Link>
           <Link href="/#projects">Projects</Link>
           <Link href="/#skills">Skills</Link>
           <Link href="/#contact">Contact</Link>
@@ -49,7 +48,6 @@ export default function Navbar() {
           </button>
           <Link href="/" onClick={close}>Home</Link>
           <Link href="/ccna" onClick={close}>CCNA Labs</Link>
-          <Link href="/saa" onClick={close}>SAA Labs</Link>
           <Link href="/#projects" onClick={close}>Projects</Link>
           <Link href="/#skills" onClick={close}>Skills</Link>
           <Link href="/#contact" onClick={close}>Contact</Link>
