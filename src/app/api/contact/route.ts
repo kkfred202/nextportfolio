@@ -1,7 +1,8 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const TO = "kkfred202@gmail.com";
+// Inbox that receives contact-form messages. Set on Vercel, never committed.
+const TO = process.env.CONTACT_TO;
 const FROM = process.env.CONTACT_FROM ?? "Portfolio Contact <onboarding@resend.dev>";
 
 const LIMITS = { name: 100, email: 200, message: 5000 };
@@ -63,8 +64,8 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("Contact form error: RESEND_API_KEY is not set");
+  if (!apiKey || !TO) {
+    console.error("Contact form error: RESEND_API_KEY or CONTACT_TO is not set");
     return NextResponse.json({ error: "Failed to send" }, { status: 500 });
   }
 
